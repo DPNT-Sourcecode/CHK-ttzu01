@@ -11,5 +11,7 @@ public class ItemPriceList {
 		itemPriceList.put("B",30);
 		itemPriceList.put("C",20);
 		itemPriceList.put("D",15);
+		itemPriceList.put("E",40);
 	}
 }
+
