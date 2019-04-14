@@ -25,10 +25,9 @@ public class CheckoutSolutionTest {
 	@Test
 	public void negativeResult() {
 		int expected = -1;
-		int actual = -1;
+		int actual = chkSolution.checkout("ghj");
 		assertEquals(expected, actual);
 	}
 
 }
-
 

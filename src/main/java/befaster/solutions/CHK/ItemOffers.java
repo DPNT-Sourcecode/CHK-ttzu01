@@ -19,4 +19,3 @@ public class ItemOffers {
 		itemOffers.put("B", new ItemOffers("B", 2, 45));
 	}
 }	
-
