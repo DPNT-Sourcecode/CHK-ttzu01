@@ -72,6 +72,18 @@ public class CheckoutSolution {
 					total += quantity*ItemPriceList.itemPriceList.get(item);
 				}
 			}
+			else if(item == "E" && itemList.containsKey("B")) {
+				MultiOffers offer = MultiOffers.multiOffers.get(item);				
+				if(offer.quantity < quantity) {
+					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;
+				}
+				else if(offer.quantity == quantity) {
+					total += (quantity/offer.quantity)*offer.price;
+				}
+				else {
+					total += quantity*ItemPriceList.itemPriceList.get(item);
+				}
+			}
 			else // calculating price for items that are not in offer
 			{
 				total += quantity*ItemPriceList.itemPriceList.get(item);
@@ -82,6 +94,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
