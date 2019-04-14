@@ -62,6 +62,11 @@ public class CheckoutSolution {
 						total += quantity*ItemPriceList.itemPriceList.get(item);
 					}
 				}
+				else if(item == "E" && !(itemList.containsKey("B"))) {
+					
+					total += quantity*ItemPriceList.itemPriceList.get(item);
+									
+				}
 				else if(offer.quantity < quantity) {
 					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;
 				}
@@ -82,4 +87,5 @@ public class CheckoutSolution {
 
 
 }
+
 
