@@ -23,6 +23,14 @@ public class CheckoutSolutionTest {
 	}
 	
 	@Test
+	public void positiveResult() {
+		int expected = 190;
+		int actual = chkSolution.checkout("ABABDB");
+		assertEquals(expected, actual);
+		
+	}
+	
+	@Test
 	public void negativeResult() {
 		int expected = -1;
 		int actual = chkSolution.checkout("ghj");
@@ -37,5 +45,6 @@ public class CheckoutSolutionTest {
 	}
 
 }
+
 
 
