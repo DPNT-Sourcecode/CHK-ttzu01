@@ -15,9 +15,8 @@ public class HelloSolutionTest {
 	
 	@Test
 	public void test() {
-		String expected = "Hello, Shirisha";
+		String expected = "Hello, Shirisha!";
 		assertEquals(expected, hello.hello("Shirisha"));
 	}
 
 }
-
