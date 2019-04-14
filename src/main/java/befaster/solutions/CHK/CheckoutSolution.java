@@ -52,8 +52,12 @@ public class CheckoutSolution {
 			//Calculating price for items those are in offers
 			if(ItemOffers.itemOffers.containsKey(item)) {
 				ItemOffers offer = ItemOffers.itemOffers.get(item);
-
-				if(offer.quantity < quantity) {
+				if(item.equals("A")) {
+					if(quantity > 5) {
+						total += (quantity/5)*200 + ((quantity%5)/3) * 130 +((quantity% 5)%3)*ItemPriceList.itemPriceList.get(item);
+					}
+				}
+				else if(offer.quantity < quantity) {
 					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;
 				}
 				else if(offer.quantity == quantity) {
@@ -73,3 +77,4 @@ public class CheckoutSolution {
 
 
 }
+
