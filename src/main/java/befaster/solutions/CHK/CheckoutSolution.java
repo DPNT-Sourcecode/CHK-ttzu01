@@ -62,13 +62,6 @@ public class CheckoutSolution {
 						total += quantity*ItemPriceList.itemPriceList.get(item);
 					}
 				}
-				else if(item == "E" && ((itemList.get("B") == 0 || (quantity%itemList.get("B")) ==0 ))) {
-					 
-					System.out.println("inside block");
-					total += quantity*ItemPriceList.itemPriceList.get(item);
-					itemList.remove("B");
-					
-				}
 				else if(offer.quantity < quantity) {
 					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;
 				}
@@ -89,6 +82,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
