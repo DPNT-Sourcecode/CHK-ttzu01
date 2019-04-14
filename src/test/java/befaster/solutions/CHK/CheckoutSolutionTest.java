@@ -16,7 +16,7 @@ public class CheckoutSolutionTest {
     }
 	@Test
 	public void test() {
-		int expected = 195;
+		int expected = 225;
 		int actual = chkSolution.checkout("AABEED");
 		assertEquals(expected, actual);
 		
@@ -52,6 +52,7 @@ public class CheckoutSolutionTest {
 	}
 
 }
+
 
 
 
