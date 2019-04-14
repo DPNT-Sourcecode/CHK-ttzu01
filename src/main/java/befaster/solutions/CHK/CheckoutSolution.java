@@ -66,6 +66,7 @@ public class CheckoutSolution {
 					 
 					System.out.println("inside block");
 					total += quantity*ItemPriceList.itemPriceList.get(item);
+					itemList.remove("B");
 					
 				}
 				else if(offer.quantity < quantity) {
@@ -88,5 +89,6 @@ public class CheckoutSolution {
 
 
 }
+
 
 
