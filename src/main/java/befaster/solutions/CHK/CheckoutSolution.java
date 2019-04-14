@@ -12,7 +12,7 @@ public class CheckoutSolution {
 
 		byte[] items = skus.getBytes();
 
-		int countA=0 , countB=0, countC = 0, countD = 0 ;
+		int countA=0 , countB=0, countC = 0, countD = 0, countE=0 ;
 		for(int i =0 ; i < items.length ; i++) {
 			switch (items[i]) {
 			case 'A' : countA++;
@@ -23,6 +23,8 @@ public class CheckoutSolution {
 			break;
 			case 'D' : countD++;
 			break;	
+			case 'E' : countE++;
+			break;
 			default : return -1;			
 			}
 
@@ -32,6 +34,7 @@ public class CheckoutSolution {
 		itemList.put("B",countB);
 		itemList.put("C", countC);
 		itemList.put("D",countD);
+		itemList.put("E", countE);
 
 		int amount = calculatePrice(itemList);
 
@@ -70,3 +73,4 @@ public class CheckoutSolution {
 
 
 }
+
