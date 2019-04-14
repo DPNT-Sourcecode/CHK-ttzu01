@@ -24,8 +24,8 @@ public class CheckoutSolutionTest {
 	
 	@Test
 	public void positiveResult() {
-		int expected = 190;
-		int actual = chkSolution.checkout("ABABDB");
+		int expected = 330;
+		int actual = chkSolution.checkout("AAAAAAAA");
 		assertEquals(expected, actual);
 		
 	}
@@ -45,5 +45,6 @@ public class CheckoutSolutionTest {
 	}
 
 }
+
 
 
