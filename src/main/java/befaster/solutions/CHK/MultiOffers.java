@@ -10,4 +10,3 @@ public class MultiOffers {
 		this.quantity= quantity;
 	}
 }
-
