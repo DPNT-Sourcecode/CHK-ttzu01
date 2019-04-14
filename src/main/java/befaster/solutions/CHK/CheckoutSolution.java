@@ -62,7 +62,7 @@ public class CheckoutSolution {
 						total += quantity*ItemPriceList.itemPriceList.get(item);
 					}
 				}
-				else if(item == "E" && !(itemList.get("B") == 0)) {
+				else if(item == "E" && (itemList.get("B") == 0)) {
 					
 					System.out.println("inside block");
 					total += quantity*ItemPriceList.itemPriceList.get(item);
@@ -88,6 +88,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
