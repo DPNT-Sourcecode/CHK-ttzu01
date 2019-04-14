@@ -14,4 +14,3 @@ public class ItemPriceList {
 		itemPriceList.put("E",40);
 	}
 }
-

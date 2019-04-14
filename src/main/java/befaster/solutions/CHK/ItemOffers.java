@@ -27,4 +27,3 @@ public class ItemOffers {
 		itemOffers.put("E", new ItemOffers("E", 2, -30));
 	}
 }	
-
