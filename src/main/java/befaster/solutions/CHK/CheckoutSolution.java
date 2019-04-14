@@ -56,6 +56,12 @@ public class CheckoutSolution {
 					if(quantity > 5) {
 						total += (quantity/5)*200 + ((quantity%5)/3) * 130 +((quantity% 5)%3)*ItemPriceList.itemPriceList.get(item);
 					}
+					else if(quantity >3) {
+						total += (quantity/3)*130 + (quantity%3)*ItemPriceList.itemPriceList.get(item);
+					}
+					else {
+						total += quantity*ItemPriceList.itemPriceList.get(item);
+					}
 				}
 				else if(offer.quantity < quantity) {
 					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;
@@ -77,4 +83,5 @@ public class CheckoutSolution {
 
 
 }
+
 
