@@ -1,5 +1,7 @@
 package befaster.solutions.CHK;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.TreeMap;
 
 import befaster.runner.SolutionNotImplementedException;
@@ -38,8 +40,27 @@ public class CheckoutSolution {
     }
 
 	private int calculatePrice(TreeMap<String, Integer> itemList) {
-		// TODO Auto-generated method stub
-		return 0;
+		int total =0 ;
+		Set<String> keys = itemList.keySet();
+		for(Iterator<String> i = keys.iterator(); i.hasNext();) {
+			String item = i.next();
+			Integer quantity = itemList.get(item);
+			
+			if(ItemOffers.itemOffers.containsKey(item)) {
+				ItemOffers offer = ItemOffers.itemOffers.get(item);
+				
+				if(offer.quantity < quantity) {
+					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;
+				}
+				else if(offer.quantity == quantity) {
+					total += (quantity/offer.quantity)*offer.price;
+				}
+				else {
+					total += quantity*ItemPriceList.itemPriceList.get(item);
+				}
+			}
+		}
+		return total;
 	}
     
 	/*
@@ -54,4 +75,5 @@ public class CheckoutSolution {
 
 
 }
+
 
