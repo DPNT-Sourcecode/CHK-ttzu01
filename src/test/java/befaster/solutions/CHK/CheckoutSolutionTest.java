@@ -28,6 +28,14 @@ public class CheckoutSolutionTest {
 		int actual = chkSolution.checkout("ghj");
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void illegalInput() {
+		int expected = -1;
+		int actual = chkSolution.checkout("AAI");
+		assertEquals(expected, actual);
+	}
 
 }
+
 

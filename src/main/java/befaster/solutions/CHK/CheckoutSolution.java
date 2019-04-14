@@ -45,7 +45,8 @@ public class CheckoutSolution {
 		for(Iterator<String> i = keys.iterator(); i.hasNext();) {
 			String item = i.next();
 			Integer quantity = itemList.get(item);
-
+			
+			//Calculating price for items those are in offers
 			if(ItemOffers.itemOffers.containsKey(item)) {
 				ItemOffers offer = ItemOffers.itemOffers.get(item);
 
@@ -59,9 +60,14 @@ public class CheckoutSolution {
 					total += quantity*ItemPriceList.itemPriceList.get(item);
 				}
 			}
+			else // calculating price for items that are not in offer
+			{
+				total += quantity*ItemPriceList.itemPriceList.get(item);
+			}
 		}
 		return total;
 	}    
 
 
 }
+
