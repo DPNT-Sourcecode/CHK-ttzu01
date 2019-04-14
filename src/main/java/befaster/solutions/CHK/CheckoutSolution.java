@@ -52,10 +52,10 @@ public class CheckoutSolution {
 			if(ItemOffers.itemOffers.containsKey(item) || item == "A") {
 				ItemOffers offer = ItemOffers.itemOffers.get(item);
 				if(item == "A") {					
-					if(quantity > 5) {
+					if(quantity >= 5) {
 						total += ((quantity/5)*200) + (((quantity%5)/3) * 130) + ((quantity% 5)%3)*ItemPriceList.itemPriceList.get(item);
 					}
-					else if(quantity >3) {
+					else if(quantity >= 3) {
 						total += (quantity/3)*130 + (quantity%3)*ItemPriceList.itemPriceList.get(item);
 					}
 					else {
@@ -82,3 +82,4 @@ public class CheckoutSolution {
 
 
 }
+
