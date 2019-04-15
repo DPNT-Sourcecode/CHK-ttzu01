@@ -12,7 +12,7 @@ public class CheckoutSolution {
 
 		byte[] items = skus.getBytes();
 
-		int countA=0 , countB=0, countC = 0, countD = 0, countE=0 ;
+		int countA=0 , countB=0, countC = 0, countD = 0, countE=0, countF=0 ;
 		for(int i =0 ; i < items.length ; i++) {
 			switch (items[i]) {
 			case 'A' : countA++;
@@ -25,6 +25,8 @@ public class CheckoutSolution {
 			break;	
 			case 'E' : countE++;
 			break;
+			case 'F' : countF++;
+			break;
 			default : return -1;			
 			}
 
@@ -32,6 +34,9 @@ public class CheckoutSolution {
 		
 		if(countB > 0) {
 		countB = countB - (countE/2);
+		}
+		if(countF >2) {
+		countF = countF - (countF/3);
 		}
 		TreeMap<String, Integer> itemList = new TreeMap<String, Integer>();
 		itemList.put("A", countA);
@@ -90,3 +95,4 @@ public class CheckoutSolution {
 
 
 }
+
