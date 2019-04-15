@@ -79,6 +79,7 @@ public class CheckoutSolution {
 			{
 				System.out.println("Inside this block - quantity of E" + quantity  + "price" + ItemPriceList.itemPriceList.get(item));
 				total += quantity*ItemPriceList.itemPriceList.get(item);
+				System.out.println(total);
 			}
 		}
 		return total;
@@ -86,6 +87,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
