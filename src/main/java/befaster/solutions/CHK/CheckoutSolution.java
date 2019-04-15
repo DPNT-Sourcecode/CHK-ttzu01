@@ -77,6 +77,7 @@ public class CheckoutSolution {
 			}
 			else // calculating price for items that are not in offer
 			{
+				System.out.println("Inside this block - quantity of E" + quantity  + "price" + ItemPriceList.itemPriceList.get(item));
 				total += quantity*ItemPriceList.itemPriceList.get(item);
 			}
 		}
@@ -85,5 +86,6 @@ public class CheckoutSolution {
 
 
 }
+
 
 
