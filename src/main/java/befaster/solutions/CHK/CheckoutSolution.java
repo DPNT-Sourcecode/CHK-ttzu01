@@ -50,8 +50,7 @@ public class CheckoutSolution {
 		Set<String> keys = itemList.keySet();
 		for(Iterator<String> i = keys.iterator(); i.hasNext();) {
 			String item = i.next();
-			Integer quantity = itemList.get(item);
-			System.out.println(item);
+			Integer quantity = itemList.get(item);			
 			//Calculating price for items those are in offers
 			if(ItemOffers.itemOffers.containsKey(item) || (item == "A" && quantity > 0)) {
 				System.out.println("Inside offers block"+ ItemOffers.itemOffers.keySet());
@@ -89,10 +88,3 @@ public class CheckoutSolution {
 
 
 }
-
-
-
-
-
-
-
