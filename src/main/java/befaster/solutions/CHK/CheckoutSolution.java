@@ -122,6 +122,28 @@ public class CheckoutSolution {
 						total += quantity*ItemPriceList.itemPriceList.get(item);
 					}
 				}
+				if(item == "H") {					
+					if(quantity >= 10) {
+						total += ((quantity/10)*80) + (((quantity%10)/5) * 45) + ((quantity% 10)%5)*ItemPriceList.itemPriceList.get(item);
+					}
+					else if(quantity >= 5) {
+						total += (quantity/5)*45 + (quantity%5)*ItemPriceList.itemPriceList.get(item);
+					}
+					else {
+						total += quantity*ItemPriceList.itemPriceList.get(item);
+					}
+				}
+				if(item == "V") {					
+					if(quantity >= 3) {
+						total += ((quantity/3)*130) + (((quantity%3)/2) * 90) + ((quantity% 3)%2)*ItemPriceList.itemPriceList.get(item);
+					}
+					else if(quantity >= 2) {
+						total += (quantity/2)*90 + (quantity%2)*ItemPriceList.itemPriceList.get(item);
+					}
+					else {
+						total += quantity*ItemPriceList.itemPriceList.get(item);
+					}
+				}
 				else if(offer.quantity < quantity) {
 					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;					
 				}
@@ -146,7 +168,3 @@ public class CheckoutSolution {
 
 
 }
-
-
-
-
