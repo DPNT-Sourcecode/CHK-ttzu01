@@ -58,6 +58,16 @@ public class CheckoutSolution {
 		if(countF >2) {
 		countF = countF - (countF/3);
 		}
+		if(countM > 0) {
+		countM = countM - (countN/3);
+		}
+		if(countQ > 0) {
+			countQ = countQ - (countR/3);
+		}
+		if(countU > 3) {
+			countU = countU - (countU/4);
+		}
+		
 		TreeMap<String, Integer> itemList = new TreeMap<String, Integer>();
 		itemList.put("A", countA);
 		itemList.put("B",countB);
@@ -136,6 +146,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
