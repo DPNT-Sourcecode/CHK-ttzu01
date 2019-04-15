@@ -109,7 +109,7 @@ public class CheckoutSolution {
 			String item = i.next();
 			Integer quantity = itemList.get(item);			
 			//Calculating price for items those are in offers
-			if(ItemOffers.itemOffers.containsKey(item) || (item == "A" && quantity > 0)) {				
+			if(ItemOffers.itemOffers.containsKey(item) || item == "A" || item == "H" || item == "V") {				
 				ItemOffers offer = ItemOffers.itemOffers.get(item);
 				if(item == "A") {					
 					if(quantity >= 5) {
@@ -168,4 +168,5 @@ public class CheckoutSolution {
 
 
 }
+
 
