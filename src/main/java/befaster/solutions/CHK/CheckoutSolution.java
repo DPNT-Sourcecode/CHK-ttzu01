@@ -68,12 +68,16 @@ public class CheckoutSolution {
 				}
 				else if(offer.quantity < quantity) {
 					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;
+					System.out.println("Inside greater block" + total);
 				}
 				else if(offer.quantity == quantity) {
+					
 					total += (quantity/offer.quantity)*offer.price;
+					System.out.println("Inside equals block" + total);
 				}
 				else {
 					total += quantity*ItemPriceList.itemPriceList.get(item);
+					System.out.println("Inside else block" + total);
 				}
 			}
 			else // calculating price for items that are not in offer
@@ -90,4 +94,5 @@ public class CheckoutSolution {
 
 
 }
+
 
