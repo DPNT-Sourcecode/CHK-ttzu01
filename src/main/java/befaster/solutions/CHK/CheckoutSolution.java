@@ -53,6 +53,7 @@ public class CheckoutSolution {
 			Integer quantity = itemList.get(item);
 			//Calculating price for items those are in offers
 			if(ItemOffers.itemOffers.containsKey(item) || item == "A") {
+				System.out.println("Inside offers block"+ ItemOffers.itemOffers.toString());
 				ItemOffers offer = ItemOffers.itemOffers.get(item);
 				if(item == "A") {					
 					if(quantity >= 5) {
@@ -87,6 +88,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
