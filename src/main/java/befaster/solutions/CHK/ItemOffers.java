@@ -21,4 +21,3 @@ public class ItemOffers {
 		itemOffers.put("Q", new ItemOffers("Q", 3, 80));
 	}
 }	
-
