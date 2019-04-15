@@ -12,8 +12,10 @@ public class ItemPriceList {
 		itemPriceList.put("C",20);
 		itemPriceList.put("D",15);
 		itemPriceList.put("E",40);
+		itemPriceList.put("F",10);
 		
 	}
 }
+
 
 
