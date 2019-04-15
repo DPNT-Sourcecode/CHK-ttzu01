@@ -10,7 +10,8 @@ public class CheckoutSolution {
 	public Integer checkout(String skus) {
 		//throw new SolutionNotImplementedException();		
 		byte[] items = skus.getBytes();
-		int countA=0 , countB=0, countC = 0, countD = 0, countE=0, countF=0 ;
+		int countA=0 , countB=0, countC = 0, countD = 0, countE=0, countF=0, countG=0, countH=0,countI=0,countJ=0,countK=0,countL=0,countM=0,countN=0,countO=0,
+				countP=0,countQ=0,countR=0,countS=0,countT=0,countU=0,countV=0,countW=0,countX=0,countY=0,countZ=0;
 		for(int i =0 ; i < items.length ; i++) {			
 			
 			switch (items[i]) {
@@ -26,6 +27,26 @@ public class CheckoutSolution {
 			break;
 			case 'F' : countF++;
 			break;
+			case 'G' : countG++;break;
+			case 'H' : countH++;break;
+			case 'I' : countI++;break;
+			case 'J' : countJ++;break;
+			case 'K' : countK++;break;
+			case 'L' : countL++;break;
+			case 'M' : countM++;break;
+			case 'N' : countN++;break;
+			case 'O' : countO++;break;
+			case 'P' : countP++;break;
+			case 'Q' : countQ++;break;
+			case 'R' : countR++;break;
+			case 'S' : countS++;break;
+			case 'T' : countT++;break;
+			case 'U' : countU++;break;
+			case 'V' : countV++;break;
+			case 'W' : countW++;break;
+			case 'X' : countX++;break;
+			case 'Y' : countY++;break;
+			case 'Z' : countZ++;break;
 			default : return -1;			
 			}
 
@@ -44,6 +65,26 @@ public class CheckoutSolution {
 		itemList.put("D",countD);
 		itemList.put("E", countE);	
 		itemList.put("F",countF);
+		itemList.put("G",countF);
+		itemList.put("H",countF);
+		itemList.put("I",countF);
+		itemList.put("J",countF);
+		itemList.put("K",countF);
+		itemList.put("L",countF);
+		itemList.put("M",countF);
+		itemList.put("N",countF);
+		itemList.put("O",countF);
+		itemList.put("P",countF);
+		itemList.put("Q",countF);
+		itemList.put("R",countF);
+		itemList.put("S",countF);
+		itemList.put("T",countF);
+		itemList.put("U",countF);
+		itemList.put("V",countF);
+		itemList.put("W",countF);
+		itemList.put("X",countF);
+		itemList.put("Y",countF);
+		itemList.put("Z",countF);
 
 		int amount = calculatePrice(itemList);
 
@@ -95,5 +136,6 @@ public class CheckoutSolution {
 
 
 }
+
 
 
