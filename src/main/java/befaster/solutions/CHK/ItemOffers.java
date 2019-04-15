@@ -16,8 +16,9 @@ public class ItemOffers {
 	
 	static {
 		itemOffers.put("B", new ItemOffers("B", 2, 45));
-		itemOffers.put("K", new ItemOffers("K", 2, 150));
+		itemOffers.put("K", new ItemOffers("K", 2, 120));
 		itemOffers.put("P", new ItemOffers("P", 5, 200));
 		itemOffers.put("Q", new ItemOffers("Q", 3, 80));
 	}
 }	
+
