@@ -14,6 +14,8 @@ public class CheckoutSolution {
 
 		int countA=0 , countB=0, countC = 0, countD = 0, countE=0, countF=0 ;
 		for(int i =0 ; i < items.length ; i++) {
+			String s = "count" + items[i];
+			
 			switch (items[i]) {
 			case 'A' : countA++;
 			break;
@@ -96,5 +98,6 @@ public class CheckoutSolution {
 
 
 }
+
 
 
