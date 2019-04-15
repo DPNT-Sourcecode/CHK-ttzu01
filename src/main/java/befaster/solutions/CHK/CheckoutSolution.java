@@ -75,26 +75,26 @@ public class CheckoutSolution {
 		itemList.put("D",countD);
 		itemList.put("E", countE);	
 		itemList.put("F",countF);
-		itemList.put("G",countF);
-		itemList.put("H",countF);
-		itemList.put("I",countF);
-		itemList.put("J",countF);
-		itemList.put("K",countF);
-		itemList.put("L",countF);
-		itemList.put("M",countF);
-		itemList.put("N",countF);
-		itemList.put("O",countF);
-		itemList.put("P",countF);
-		itemList.put("Q",countF);
-		itemList.put("R",countF);
-		itemList.put("S",countF);
-		itemList.put("T",countF);
-		itemList.put("U",countF);
-		itemList.put("V",countF);
-		itemList.put("W",countF);
-		itemList.put("X",countF);
-		itemList.put("Y",countF);
-		itemList.put("Z",countF);
+		itemList.put("G",countG);
+		itemList.put("H",countH);
+		itemList.put("I",countI);
+		itemList.put("J",countJ);
+		itemList.put("K",countK);
+		itemList.put("L",countL);
+		itemList.put("M",countM);
+		itemList.put("N",countN);
+		itemList.put("O",countO);
+		itemList.put("P",countP);
+		itemList.put("Q",countQ);
+		itemList.put("R",countR);
+		itemList.put("S",countS);
+		itemList.put("T",countT);
+		itemList.put("U",countU);
+		itemList.put("V",countV);
+		itemList.put("W",countW);
+		itemList.put("X",countX);
+		itemList.put("Y",countY);
+		itemList.put("Z",countZ);
 
 		int amount = calculatePrice(itemList);
 
@@ -122,7 +122,7 @@ public class CheckoutSolution {
 						total += quantity*ItemPriceList.itemPriceList.get(item);
 					}
 				}
-				if(item == "H") {					
+				else if(item == "H") {					
 					if(quantity >= 10) {
 						total += ((quantity/10)*80) + (((quantity%10)/5) * 45) + ((quantity% 10)%5)*ItemPriceList.itemPriceList.get(item);
 					}
@@ -133,7 +133,7 @@ public class CheckoutSolution {
 						total += quantity*ItemPriceList.itemPriceList.get(item);
 					}
 				}
-				if(item == "V") {					
+				else if(item == "V") {					
 					if(quantity >= 3) {
 						total += ((quantity/3)*130) + (((quantity%3)/2) * 90) + ((quantity% 3)%2)*ItemPriceList.itemPriceList.get(item);
 					}
@@ -168,3 +168,4 @@ public class CheckoutSolution {
 
 
 }
+

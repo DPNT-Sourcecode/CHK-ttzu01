@@ -117,8 +117,9 @@ public class CheckoutSolutionTest {
 	@Test public void negativeResult() { int expected = -1; int actual =
 			chkSolution.checkout("ghj"); assertEquals(expected, actual); }
 
-	@Test public void illegalInput() { int expected = -1; int actual =
+	@Test public void illegalInput() { int expected = 135; int actual =
 			chkSolution.checkout("AAI"); assertEquals(expected, actual); }
 
 }
+
 
