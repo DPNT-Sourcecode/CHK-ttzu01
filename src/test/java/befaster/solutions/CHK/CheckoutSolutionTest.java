@@ -34,14 +34,19 @@ public class CheckoutSolutionTest {
 
 	}
 
-	@Test public void positiveResult1() { int expected = 160; int actual =
-			chkSolution.checkout("EEEEBB"); assertEquals(expected, actual);
+	@Test public void positiveResult1() { 
+		int expected = 160; 
+		int actual =chkSolution.checkout("EEEEBB"); 
+		assertEquals(expected, actual);
 
 	}
 
 
-	@Test public void positiveResultMultiple() { int expected = 380; int actual =
-			chkSolution.checkout("AAAAAAAAA"); assertEquals(expected, actual);
+	@Test 
+	public void positiveResultMultiple() { 
+		int expected = 380; 
+		int actual =chkSolution.checkout("AAAAAAAAA"); 
+		assertEquals(expected, actual);
 
 	}
 
@@ -61,5 +66,6 @@ public class CheckoutSolutionTest {
 			chkSolution.checkout("AAI"); assertEquals(expected, actual); }
 
 }
+
 
 
