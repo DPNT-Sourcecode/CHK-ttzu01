@@ -178,7 +178,3 @@ public class CheckoutSolutionTest {
 
 }
 
-
-
-
-
