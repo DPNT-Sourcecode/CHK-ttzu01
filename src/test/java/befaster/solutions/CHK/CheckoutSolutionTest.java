@@ -58,7 +58,54 @@ public class CheckoutSolutionTest {
 
 	}
 
+	@Test
+	public void positiveResultF() {
+		int expected = 20;
+		int actual = chkSolution.checkout("FF");
+		assertEquals(expected, actual);
 
+	}
+	
+	@Test
+	public void positiveResultF1() {
+		int expected = 20;
+		int actual = chkSolution.checkout("FFF");
+		assertEquals(expected, actual);
+
+	}
+	
+	@Test
+	public void positiveResultF2() {
+		int expected = 120;
+		int actual = chkSolution.checkout("EEBFFFFF");
+		assertEquals(expected, actual);
+
+	}
+	
+	@Test
+	public void positiveResultF3() {
+		int expected = 120;
+		int actual = chkSolution.checkout("EEFFFFF");
+		assertEquals(expected, actual);
+
+	}
+	
+	@Test
+	public void positiveResultF4() {
+		int expected = 170;
+		int actual = chkSolution.checkout("AAAFFFFF");
+		assertEquals(expected, actual);
+
+	}
+	
+	@Test
+	public void positiveResultF5() {
+		int expected = 270;
+		int actual = chkSolution.checkout("FFAAAAAA");
+		assertEquals(expected, actual);
+
+	}
+	
 	@Test public void negativeResult() { int expected = -1; int actual =
 			chkSolution.checkout("ghj"); assertEquals(expected, actual); }
 
@@ -66,4 +113,5 @@ public class CheckoutSolutionTest {
 			chkSolution.checkout("AAI"); assertEquals(expected, actual); }
 
 }
+
 

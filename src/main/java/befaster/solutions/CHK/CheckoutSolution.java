@@ -43,7 +43,8 @@ public class CheckoutSolution {
 		itemList.put("B",countB);
 		itemList.put("C", countC);
 		itemList.put("D",countD);
-		itemList.put("E", countE);		
+		itemList.put("E", countE);	
+		itemList.put("F",countF);
 
 		int amount = calculatePrice(itemList);
 
@@ -95,4 +96,5 @@ public class CheckoutSolution {
 
 
 }
+
 
