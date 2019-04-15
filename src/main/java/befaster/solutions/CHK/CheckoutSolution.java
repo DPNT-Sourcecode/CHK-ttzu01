@@ -9,10 +9,11 @@ import befaster.runner.SolutionNotImplementedException;
 public class CheckoutSolution {
 	public Integer checkout(String skus) {
 		//throw new SolutionNotImplementedException();
-		TreeMap<Byte, Integer> itemList = new TreeMap<Byte, Integer>();
+		TreeMap<String, Integer> itemList = new TreeMap<String, Integer>();
 		byte[] items = skus.getBytes();
 		int counter = 0;
 		for(int i=0 ; i<items.length ; i++) {
+			String item = items[i].
 			itemList.put(items[i],counter);
 		}
 		int countA=0 , countB=0, countC = 0, countD = 0, countE=0, countF=0 ;
@@ -93,4 +94,3 @@ public class CheckoutSolution {
 
 
 }
-
