@@ -30,7 +30,9 @@ public class CheckoutSolution {
 
 		}
 		
+		if(countB > 0) {
 		countB = countB - (countE/2);
+		}
 		TreeMap<String, Integer> itemList = new TreeMap<String, Integer>();
 		itemList.put("A", countA);
 		itemList.put("B",countB);
@@ -52,8 +54,7 @@ public class CheckoutSolution {
 			String item = i.next();
 			Integer quantity = itemList.get(item);			
 			//Calculating price for items those are in offers
-			if(ItemOffers.itemOffers.containsKey(item) || (item == "A" && quantity > 0)) {
-				System.out.println("Inside offers block"+ ItemOffers.itemOffers.keySet());
+			if(ItemOffers.itemOffers.containsKey(item) || (item == "A" && quantity > 0)) {				
 				ItemOffers offer = ItemOffers.itemOffers.get(item);
 				if(item == "A") {					
 					if(quantity >= 5) {
@@ -67,26 +68,22 @@ public class CheckoutSolution {
 					}
 				}
 				else if(offer.quantity < quantity) {
-					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;
-					System.out.println("Inside greater block" + total);
+					total += (quantity% offer.quantity)*ItemPriceList.itemPriceList.get(item) + (quantity/offer.quantity)*offer.price;					
 				}
 				else if(offer.quantity == quantity) {
 					
-					total += (quantity/offer.quantity)*offer.price;
-					System.out.println("Inside equals block" + total);
+					total += (quantity/offer.quantity)*offer.price;					
 				}
 				else {
 					total += quantity*ItemPriceList.itemPriceList.get(item);
-					System.out.println("Inside else block" + total);
 				}
 			}
 			else // calculating price for items that are not in offer
 			{
-				System.out.println("Inside this block - quantity of "+ item + " " + quantity  + "price" + ItemPriceList.itemPriceList.get(item));
+				
 				total += quantity*ItemPriceList.itemPriceList.get(item);
 				
 				
-				System.out.println(total);
 			}
 		}
 		return total;
@@ -94,5 +91,6 @@ public class CheckoutSolution {
 
 
 }
+
 
 
