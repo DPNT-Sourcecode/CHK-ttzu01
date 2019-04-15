@@ -12,12 +12,10 @@ public class ItemOffers {
 		this.price=price;
 	}
 	
-	
-	
 	public static TreeMap<String, ItemOffers> itemOffers = new TreeMap<String, ItemOffers>();
 	
 	static {
 		itemOffers.put("B", new ItemOffers("B", 2, 45));
-		
 	}
 }	
+
